@@ -1,0 +1,55 @@
+Chunking works -> Still need merging method
+
+const generatePodcast = async () => {
+
+
+    setIsGenerating(true);
+    setAudio('');
+
+    if(!voicePrompt) {
+      toast({
+        title: "Please provide a voiceType to generate a podcast",
+      })
+      return setIsGenerating(false);
+    }
+
+    try {
+      const textChunks = splitText(voicePrompt);
+      const audioFiles = [];
+
+      for (const chunk of textChunks) {
+        const response = await getPodcastAudio({
+          voice: voiceType,
+          input: chunk
+      });
+
+      const blob = new Blob([response], { type: 'audio/mpeg' });
+      const fileName = `podcast-${uuidv4()}.mp3`;
+      const file = new File([blob], fileName, { type: 'audio/mpeg' });
+
+      const uploaded = await startUpload([file]);
+      const storageId = (uploaded[0].response as any).storageId;
+
+      setAudioStorageId(storageId);
+
+      const audioUrl = await getAudioUrl({ storageId });
+      audioFiles.push(audioUrl);
+
+      setAudio(audioUrl!);
+      setIsGenerating(false);
+      toast({
+        title: "Podcast generated successfully",
+      })
+    }} catch (error) {
+      console.log('Error generating podcast', error)
+      toast({
+        title: "Error creating a podcast",
+        variant: 'destructive',
+      })
+      setIsGenerating(false);
+    }
+    
+  }
+
+  return { isGenerating, generatePodcast }
+}
