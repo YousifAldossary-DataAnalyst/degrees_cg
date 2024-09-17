@@ -7,7 +7,7 @@ import { SpeechCreateParams } from "openai/resources/audio/speech.mjs";
 
 // WIP: env. error again! api
 const openai = new OpenAI({
-  apiKey: process.env.OPEN_AI_KEY,
+  apiKey: process.env.OPEN_AI_KEY!,
 })
 
 export const generateAudioAction = action({
