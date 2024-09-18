@@ -12,10 +12,9 @@ import { DialogDescription, DialogTitle } from "@radix-ui/react-dialog";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
 import { useRouter } from "next/navigation";
-import { CreateEditBoard } from "@/lib/board";
 import Hint from "@/components/global/tool-tip";
 import { useUser } from "@clerk/nextjs";
-import { db } from "@/db/db";
+import { db } from "@/db/drizzle";
 import { EditBoards } from "@/db/schema";
 import moment from "moment";
 

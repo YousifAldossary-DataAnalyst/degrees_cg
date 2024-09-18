@@ -3,7 +3,7 @@ import { Hono } from "hono";
 import { eq } from "drizzle-orm";
 import { zValidator } from "@hono/zod-validator";
 import { users, usersInsertSchema } from "@/db/schema";
-import { db } from "@/db/db";
+import { db } from "@/db/drizzle";
 import { useUser } from "@clerk/nextjs";
 import { currentUser } from "@clerk/nextjs/server";
 

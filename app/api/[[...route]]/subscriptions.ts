@@ -9,7 +9,7 @@
 // import { subscriptions } from "@/db/schema";
 // import { useUser } from "@clerk/nextjs";
 // import { currentUser } from "@clerk/nextjs/server";
-// import { db } from "@/db/db";
+// import { db } from "@/db/drizzle";
 
 // const app = new Hono()
 //   .post("/billing", clerkMiddleware(), async (c) => {

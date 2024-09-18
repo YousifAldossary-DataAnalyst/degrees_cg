@@ -5,7 +5,7 @@ import { clerkMiddleware, getAuth } from "@hono/clerk-auth";
 import { zValidator } from "@hono/zod-validator";
 
 import { projects, projectsInsertSchema } from "@/db/canva-schema";
-import { db } from "@/db/db";
+import { db } from "@/db/drizzle";
 import { currentUser } from "@clerk/nextjs/server";
 
 const app = new Hono()

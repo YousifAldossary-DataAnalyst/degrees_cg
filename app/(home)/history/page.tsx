@@ -7,7 +7,7 @@ import Image from "next/image";
 import React from "react";
 import { TEMPLATE } from "../content/_component/template-list-section";
 import Templates from "../(data)/Templates";
-import { db } from "@/db/db";
+import { db } from "@/db/drizzle";
 import CopyButton from "./_components/copy-button";
 
 export interface HISTORY {

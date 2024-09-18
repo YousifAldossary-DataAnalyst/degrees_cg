@@ -5,11 +5,11 @@ const nextConfig = {
         remotePatterns: [
             {
               protocol: 'https',
-              hostname: 'lovely-flamingo-139.convex.cloud'
+              hostname: 'agile-marmot-192.convex.cloud'
             },
             {
               protocol: 'https',
-              hostname: 'https://prestigious-opossum-362.convex.cloud'
+              hostname: 'https://agile-marmot-192.convex.cloud/'
             },
             {
               protocol: 'https',
@@ -28,6 +28,10 @@ const nextConfig = {
               hostname: "replicate.delivery"
             },
           ]
+    },
+    env:{
+      DATABASE_URL: process.env.DATABASE_URL,
+      OPEN_AI_KEY: process.env.OPEN_AI_KEY,
     }
 };
 

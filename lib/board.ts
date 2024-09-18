@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { db } from "../db/db";
+import { db } from "../db/drizzle";
 import { EditBoards } from "../db/schema";
 import { currentUser } from "@clerk/nextjs/server";
 import moment from "moment";

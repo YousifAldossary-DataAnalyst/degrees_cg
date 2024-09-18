@@ -2,13 +2,13 @@
 import { action } from "@/convex/_generated/server";
 import { v } from "convex/values";
 
-import OpenAI from "openai";
+import OpenAi from "openai";
 import { SpeechCreateParams } from "openai/resources/audio/speech.mjs";
 
 // WIP: env. error again! api
-const openai = new OpenAI({
-  apiKey: process.env.OPEN_AI_KEY,
-})
+const openai = new OpenAi({
+  apiKey: "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",
+});
 
 export const generateAudioAction = action({
   args: { input: v.string(), voice: v.string() },

@@ -1,4 +1,4 @@
-import { db } from "@/db/db";
+import { db } from "@/db/drizzle";
 import { CreateBoard, EditBoards } from "@/db/schema";
 import { currentUser } from "@clerk/nextjs/server";
 import { and, desc, eq } from "drizzle-orm";

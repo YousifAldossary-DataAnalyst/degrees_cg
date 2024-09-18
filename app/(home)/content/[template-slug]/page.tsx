@@ -11,7 +11,7 @@ import moment from "moment"
 
 import { GenerateAIContent } from "@/lib/modal-ai";
 import { useToast } from "@/components/ui/use-toast";
-import { db } from "@/db/db";
+import { db } from "@/db/drizzle";
 import { AIoutput } from "@/db/schema";
 import { useUser } from "@clerk/nextjs";
 

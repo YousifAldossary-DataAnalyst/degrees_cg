@@ -10,7 +10,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { CreateOrganization, useUser } from "@clerk/nextjs";
 import { CreateBoard } from "@/db/schema";
-import { db } from "@/db/db";
+import { db } from "@/db/drizzle";
 import moment from "moment";
 import { DialogDescription, DialogTitle } from "@radix-ui/react-dialog";
 import { Input } from "@/components/ui/input";

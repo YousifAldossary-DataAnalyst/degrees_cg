@@ -14,7 +14,7 @@ import { useDeleteBoard } from "@/lib/data";
 import { OpenBoard } from "@/hooks/use-open";
 import { toast } from "sonner";
 import { CreateBoard } from "@/db/schema";
-import { db } from "@/db/db";
+import { db } from "@/db/drizzle";
 import { eq } from "drizzle-orm";
 import { redirect } from "next/dist/server/api-utils";
 import { useRouter } from "next/navigation";
