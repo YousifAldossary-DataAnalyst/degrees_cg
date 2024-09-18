@@ -5,6 +5,7 @@ import * as schema from './schema'
 //WIP: DATABASE_URL Does not work!!?
 const sql = neon(process.env.DATABASE_URL!);
 export const db = drizzle(sql,{schema});
+
 // const sql = neon(process.env.DATABASE_URL!);
 
 // import {neon} from '@neondatabase/serverless';
